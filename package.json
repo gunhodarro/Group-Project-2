@@ -1,0 +1,24 @@
+{
+  "name": "group-project-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "scraper.js",
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "nightmare": "^3.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gunhodarro/Group-Project-2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gunhodarro/Group-Project-2/issues"
+  },
+  "homepage": "https://github.com/gunhodarro/Group-Project-2#readme"
+}
