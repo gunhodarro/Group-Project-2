@@ -12,9 +12,9 @@ let transport = nodemailer.createTransport({
 
 const message = {
   from: "craigfinderalert@gmail.com", // Sender address
-  to: "gunhodarro@gmail.com", // List of recipients
-  subject: `This is a test email`, // Subject line
-  text: "Here is a link to the listing" // Plain text body
+  to: accountEmail, // List of recipients
+  subject: subject, // Subject line
+  text: emailBody // Plain text body
 };
 
 transport.sendMail(message, function(err, info) {
