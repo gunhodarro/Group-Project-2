@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
     <link rel="stylesheet" href="assets/styles.css">
  
-    <title> Bulma Project Prototype </title>
+    <title>Craigzone</title>
 </head>
 <body class ="landingPage">
 
-    <section class="hero is-white has-text-centered">
+    <section class="hero is-white has-text-centered" id="hero">
         <div class="hero-body">
           <div class="container">
 
@@ -37,11 +37,13 @@
             <div class="tile is-parent">
                 <article class="tile is-child notification is-success has-text-centered" id="boxy">
                   <div class="content">
+
+                    <p class="current">Current City:</p>
             
                         <div class="field">
                             <label class="label"> City </label>
                             <div class="control has-icons-left has-icons-right">
-                                <input class="input" type="text" placeholder="Text input" value="Where are you hoping to find stuff?">
+                                <input class="input" type="text" placeholder="City To Search?">
                                 <span class="icon is-small is-left">
                                 <i class="fas fa-user"></i>
                                 </span>
@@ -53,7 +55,7 @@
                             <div class="field">
                                 <label class="label"> Category </label>
                                 <div class="control has-icons-left has-icons-right">
-                                    <input class="input" type="text" placeholder="Text input" value="What are you hoping to find?">
+                                    <input class="input" type="text" placeholder="What are you hoping to find?">
                                     <span class="icon is-small is-left">
                                     <i class="fas fa-user"></i>
                                     </span>
@@ -65,7 +67,7 @@
                             <div class="field">
                                     <label class="label"> Keyword Search </label>
                                     <div class="control has-icons-left has-icons-right">
-                                        <input class="input" type="text" placeholder="Text input" value="Let's try to narrow this down">
+                                        <input class="input" type="text" placeholder= "Let's try to narrow this down">
                                         <span class="icon is-small is-left">
                                         <i class="fas fa-user"></i>
                                         </span>
@@ -76,20 +78,15 @@
                     
                             <div class="field">
                                 <label class="label"> Price Range </label>
-                                <div class="control has-icons-left has-icons-right">
-                                    <input class="input" type="text" placeholder="Text input" value="How much are you hoping to spend?">
-                                    <span class="icon is-small is-left">
-                                    <i class="fas fa-user"></i>
-                                    </span>
-                                    <span class="icon is-small is-right">
-                                    <i class="fas fa-check"></i>
-                                    </span>
+                                <div class="control">
+                                    <input id="min" class="input" type="text" placeholder= "min"> <input id="max" class="input" type="text" placeholder= "max">
+                                    
                             </div>
                     
                             <div class="field">
                                 <label class="label"> Email </label>
                                 <div class="control has-icons-left has-icons-right">
-                                    <input class="input" type="text" placeholder="Text input" value="What's Your Email?">
+                                    <input class="input" type="text" placeholder= "What's Your Email?">
                                     <span class="icon is-small is-left">
                                     <i class="fas fa-user"></i>
                                     </span>
@@ -107,7 +104,7 @@
                       <div class="content">
 
                         <button class="button is-link has-text-centered">
-                            Search!
+                           Find Me Deals!
                         </button>
 
                         </div>

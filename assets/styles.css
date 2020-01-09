@@ -3,19 +3,15 @@
 
   
 }
-/* 
-.input{
-    width: 20%;
-} */
+
 
 .tagline{
     color: purple;
     font-size: medium;
+    position: relative;
+    bottom: 15px;
 }
 
-/* .tile{
-
-} */
 
 #boxy{
     background-color:whitesmoke;
@@ -29,7 +25,34 @@
     color: rgb(73, 3, 73);
 }
 
-.center{
-    margin : 0 auto;
-    text-align : center;
+/* #hero{
+height:350px ;
+} */
+
+.input {
+color:rgb(73, 3, 73);
+    text-align: center;
+  }
+
+.current{
+    color:rgb(73, 3, 73) ;
 }
+input::placeholder {
+    opacity: 3; 
+    color:rgb(73, 3, 73);
+} 
+
+input:focus::placeholder {
+    opacity: 0;
+}
+
+#min{
+    width: 130px;
+    text-align: left;
+}
+
+#max{
+    width: 130px;
+    text-align: left;
+}
+ 
