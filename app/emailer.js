@@ -3,7 +3,7 @@ const nodemailer = require("nodemailer");
 function mailer(user) {
   var subject = `We found a ${user.listing} in your area!`;
   var emailBody = `We have found a listing that matches your parameters!:
-  ${listingLink}`;
+  ${user.listingLink}`;
   var accountEmail = user.email;
 
   let transport = nodemailer.createTransport({
@@ -22,6 +22,7 @@ function mailer(user) {
     subject: subject, // Subject line
     text: emailBody // Plain text body
   };
+  message, accountEmail, subject, emailBody;
 
   transport.sendMail(message, function(err, info) {
     if (err) {
