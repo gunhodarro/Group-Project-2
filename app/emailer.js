@@ -1,12 +1,12 @@
 const nodemailer = require("nodemailer");
 
-function mailer(user) {
+const Mailer = function(user) {
   var subject = `We found a ${user.listing} in your area!`;
   var emailBody = `We have found a listing that matches your parameters!:
   ${user.listingLink}`;
   var accountEmail = user.email;
 
-  let transport = nodemailer.createTransport({
+  var transport = nodemailer.createTransport({
     host: "smtp.gmail.com",
     port: 465,
     secure: true,
@@ -31,4 +31,6 @@ function mailer(user) {
       console.log("Email sent: " + info);
     }
   });
-}
+};
+
+module.exports = Mailer;
