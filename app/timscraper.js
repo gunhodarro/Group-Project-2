@@ -1,15 +1,15 @@
 const puppeteer = require("puppeteer");
 
-async function getResults() {
+async function getResults(City, Item, MinPrice, MaxPrice) {
   const browser = await puppeteer.launch({
     headless: false,
     defaultViewport: null
   });
 
-  var city = "denver";
-  var item = "pool table";
-  var minPrice = null;
-  var maxPrice = null;
+  var city = City;
+  var item = Item;
+  var minPrice = MinPrice;
+  var maxPrice = MaxPrice;
 
   const page = await browser.newPage();
 
@@ -50,4 +50,4 @@ async function getResults() {
   };
 }
 
-getResults();
+module.exports.scraper = getResults;
