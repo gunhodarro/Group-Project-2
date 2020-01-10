@@ -6,6 +6,11 @@ async function getResults() {
     defaultViewport: null
   });
 
+  var city = "denver";
+  var item = "pool table";
+  var minPrice = null;
+  var maxPrice = null;
+
   const page = await browser.newPage();
 
   const url =
