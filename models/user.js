@@ -1,15 +1,28 @@
-var Sequelize = require("sequelize");
-var sequelize = require("../config/connection.js");
+module.exports = function(sequelize, DataTypes) {
+  var User = sequelize.define("User", {
+    userEmail: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [4]
+      }
+    },
+    password: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [6]
+      }
+    }
+  });
 
-var User = sequelize.define("user", {
-  userEmail: Sequelize.STRING,
-  city: Sequelize.STRING,
-  category: Sequelize.STRING,
-  searchKeyword: Sequelize.STRING,
-  priceMin: Sequelize.INTEGER,
-  priceMax: Sequelize.INTEGER
-});
+  User.associate = function(models) {
+    // Associating Author with Posts
+    // When an Author is deleted, also delete any associated Posts
+    User.hasMany(models.Search, {
+      onDelete: "cascade"
+    });
+  };
 
-User.sync();
-
-module.exports = User;
+  return User;
+};
