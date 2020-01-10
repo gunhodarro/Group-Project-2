@@ -6,6 +6,16 @@ var PORT = process.env.PORT || 8080;
 
 var db = require("./models");
 
+//handlebars stuff
+app.engine(
+  "hbs",
+  hbs({
+    extname: "hbs",
+    defaultLayout: "user",
+    layoutsDir: __dirname + "/public/handlebars/"
+  })
+);
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
