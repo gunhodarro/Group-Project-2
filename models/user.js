@@ -16,6 +16,7 @@ module.exports = function(sequelize, DataTypes) {
     },
     wantsEmail: {
       type: DataTypes.BOOLEAN,
+      defaultValue: true,
       allowNull: false
     }
   });
@@ -33,9 +34,8 @@ module.exports = function(sequelize, DataTypes) {
     );
   });
 
+  //Associating the user with their search preferences
   User.associate = function(models) {
-    // Associating Author with Posts
-    // When an Author is deleted, also delete any associated Posts
     User.hasMany(models.Search, {
       onDelete: "cascade"
     });

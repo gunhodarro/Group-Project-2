@@ -2,14 +2,12 @@ module.exports = function(sequelize, DataTypes) {
   var Search = sequelize.define("Search", {
     title: {
       type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: []
-      }
+      allowNull: false
     },
     url: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
+      unique: true
     },
     price: {
       type: DataTypes.INTEGER,

@@ -20,7 +20,7 @@ const scraper = require("./app/timscraper.js");
 
 let dump = scraper.data.craigScrape("denver", "pool table", 0, 5000);
 dump.then(function(result) {
-  console.log(result[0].price);
+  console.log(result.length);
 });
 
 // console.log(scraper);
