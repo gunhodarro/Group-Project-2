@@ -4,6 +4,7 @@ nightmare = Nightmare();
 
 var city = process.argv[2];
 var search = process.argv[3];
+
 //variables  for user input on the searches
 
 nightmare
