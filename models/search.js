@@ -7,11 +7,7 @@ module.exports = function(sequelize, DataTypes) {
         len: []
       }
     },
-    category: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    searchKeyword: {
+    item: {
       type: DataTypes.STRING,
       allowNull: false
     },
