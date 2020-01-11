@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
     <link rel="stylesheet" href="assets/styles.css">
  
-    <title>Craigzone</title>
+    <title> Bulma Project Prototype </title>
 </head>
 <body class ="landingPage">
 
-    <section class="hero is-white has-text-centered" id="hero">
+    <section class="hero is-white has-text-centered">
         <div class="hero-body">
           <div class="container">
 
@@ -25,25 +25,19 @@
                 </h2>
     </section>
 
-  
-    <br>
 
- 
-    <div class="columns is-mobile is-centered">
-    <div class="tile is-6 is-parent"  id="tile">
-        <article class="tile is-child notification  has-text-centered">
+    <div class="is-centered">
+        <article class="tile is-child is-centered notification">
           <div class="content">
 
             <div class="tile is-parent">
-                <article class="tile is-child notification is-success has-text-centered" id="boxy">
+                <article class="tile is-child notification is-success has-text-centered">
                   <div class="content">
-
-                    <p class="current">Current City:</p>
             
                         <div class="field">
                             <label class="label"> City </label>
                             <div class="control has-icons-left has-icons-right">
-                                <input class="input" type="text" placeholder="City To Search?">
+                                <input class="input" type="text" placeholder="Text input" value="Where are you hoping to find stuff?">
                                 <span class="icon is-small is-left">
                                 <i class="fas fa-user"></i>
                                 </span>
@@ -55,7 +49,7 @@
                             <div class="field">
                                 <label class="label"> Category </label>
                                 <div class="control has-icons-left has-icons-right">
-                                    <input class="input" type="text" placeholder="What are you hoping to find?">
+                                    <input class="input is-success" type="text" placeholder="Text input" value="What are you hoping to find?">
                                     <span class="icon is-small is-left">
                                     <i class="fas fa-user"></i>
                                     </span>
@@ -67,7 +61,7 @@
                             <div class="field">
                                     <label class="label"> Keyword Search </label>
                                     <div class="control has-icons-left has-icons-right">
-                                        <input class="input" type="text" placeholder= "Let's try to narrow this down">
+                                        <input class="input is-success" type="text" placeholder="Text input" value="Let's try to narrow this down">
                                         <span class="icon is-small is-left">
                                         <i class="fas fa-user"></i>
                                         </span>
@@ -79,26 +73,34 @@
                             <div class="field">
                                 <label class="label"> Price Range </label>
 
+
+
                                 <div class="control">
+
                                     <div class="columns">
-                                        <div class="column is-two-fifths">
-                                            <input class="input" type="text" placeholder="Min!">
+                                        <div class="column">
+                                            <input class="input is-success" type="text" placeholder="Text input" value="Min!">
                                         </div>
-                                        <div class="column is-auto">
-                                        <!-- <p> unnactive </p>  -->
+                                        <div class="column">
+                                         
                                         </div>
-                                        <div class="column is-two-fifths">
-                                            <input class="input" type="text" placeholder="Max!">
+                                        <div class="column">
+                                            <input class="input is-success" type="text" placeholder="Text input" value="Min!">
                                         </div>
                                     </div>
                                 </div>
 
+                                    
+                                    
+
+
+
                             </div>
                     
                             <div class="field">
-                                <label class="label"> Email </label>
+                                <label class="label"> User # </label>
                                 <div class="control has-icons-left has-icons-right">
-                                    <input class="input" type="text" placeholder= "What's Your Email?">
+                                    <input class="input is-success" type="text" placeholder="Text input" value="Do you have a user number?">
                                     <span class="icon is-small is-left">
                                     <i class="fas fa-user"></i>
                                     </span>
@@ -112,11 +114,11 @@
                 </div>
 
                 <div class="tile is-parent">
-                    <article class="tile is-child notification is-success has-text-centered" id="submit">
+                    <article class="tile is-child notification is-success has-text-centered">
                       <div class="content">
 
                         <button class="button is-link has-text-centered">
-                           Find Me Deals!
+                            Search!
                         </button>
 
                         </div>
@@ -124,14 +126,10 @@
                 </div>
 
 
-            
-        </div>
+            </div>
         </article>
       </div>
-   </div>
-</div>
 
-
- </body>        
+    
 </body>
 </html>
