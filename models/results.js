@@ -1,5 +1,9 @@
 module.exports = function(sequelize, DataTypes) {
-  var Search = sequelize.define("Search", {
+  var Results = sequelize.define("Results", {
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true
+    },
     title: {
       type: DataTypes.STRING,
       allowNull: false
@@ -11,7 +15,7 @@ module.exports = function(sequelize, DataTypes) {
     },
     price: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: true
     },
     image: {
       type: DataTypes.STRING,
@@ -19,15 +23,15 @@ module.exports = function(sequelize, DataTypes) {
     }
   });
 
-  Search.associate = function(models) {
+  Results.associate = function(models) {
     // We're saying that a Post should belong to an Author
     // A Post can't be created without an Author due to the foreign key constraint
-    Post.belongsTo(models.User, {
+    Results.belongsTo(models.User, {
       foreignKey: {
         allowNull: false
       }
     });
   };
 
-  return Post;
+  return Results;
 };

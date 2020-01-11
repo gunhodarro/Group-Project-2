@@ -6,7 +6,7 @@ const scraper = require("./app/timscraper.js");
 // var app = express();
 // var PORT = process.env.PORT || 8080;
 
-// // var db = require("./models");
+var db = require("./models");
 
 // //handlebars stuff
 // app.engine(
@@ -19,9 +19,6 @@ const scraper = require("./app/timscraper.js");
 // );
 
 let dump = scraper.data.craigScrape("denver", "pool table", 0, 5000);
-dump.then(function(result) {
-  console.log(result.length);
-});
 
 // console.log(scraper);
 

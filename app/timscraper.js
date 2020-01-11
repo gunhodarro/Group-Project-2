@@ -1,7 +1,7 @@
 methods = {
   craigScrape: async function getResults(City, Item, MinPrice, MaxPrice) {
     const puppeteer = require("puppeteer");
-    const db = require("../models/");
+    const db = require("../models");
     const browser = await puppeteer.launch({
       headless: true,
       defaultViewport: null
@@ -36,6 +36,7 @@ methods = {
         properties.url = titleEl.getAttribute("href");
         const priceEl = row.querySelector(".result-price");
         properties.price = priceEl ? priceEl.innerText : "";
+        properties.price.trim("$");
         const imageEl = row.querySelector(".swipe [data-index='0'] img");
         properties.imageUrl = imageEl ? imageEl.src : "";
         return properties;
@@ -45,17 +46,17 @@ methods = {
     // console.log(url);
     browser.close();
 
-    for (var i = 0; i < results.length; i++) {
-      sequelize.sync().then(() => db.Results.create({
-        title = results[i].title,
-        url = results[i].url,
-        price = results[i].price,
-        image = results[i].imageUrl,
-      })).then(item => {
-        console.log(item.toJSON());
+    db.Results.bulkCreate(results)
+      .then(() => {
+        // Notice: There are no arguments here, as of right now you'll have to...
+        return db.Results.findAll();
+      })
+      .then(users => {
+        console.log(users); // ... in order to get the array of user objects
       });
-    }
 
+    // console.log(results);
+    // console.log(results[4]);
     return results;
   }
 };
